@@ -1,0 +1,7 @@
+$height: 100px;
+$colorFoot: rgba(82, 88, 104, 0.27);;
+.footer{
+	height: $height;
+	background: $colorFoot;
+	clear: both;
+}

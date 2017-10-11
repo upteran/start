@@ -1,0 +1,40 @@
+/* ALERTS
+===============================*/
+.alert-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	background: $shadow;
+		.alert{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+}
+.alert{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	@mixin rounded_corners 4px;
+}
+.alert_success{
+	@mixin border 1px, $succAlert;
+	color: $succAlert;
+}
+.alert_warning{
+	@mixin border 1px, $warnAlert;
+	color: $warnAlert;
+}
+.alert_error{
+	@mixin border 1px, $errAlert;
+	color: $errAlert;
+}
+.alert__title{
+	font-size: 20px;
+}

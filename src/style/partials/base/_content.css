@@ -1,0 +1,5 @@
+.content-wrap{
+	width: calc(100% - 200px);
+	width: -ms-calc(100% - 200px);
+	float: right;
+}
