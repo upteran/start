@@ -12,10 +12,13 @@ button
   	@mixin border;
 	outline: none;
 	height: 40px;
+	padding: 0 20px;
+	font-size: 14px;
 	min-width: 140px;
 	font-weight: 400;
 	cursor: pointer;
 	font-family: $buttonFont;
+	max-width: 100%;
 	@mixin rounded_corners 3px;
 		&.btn_ghost{
 			background: transparent;
@@ -33,7 +36,12 @@ button
 	@mixin button $btnSuccColor, #000, color($btnSuccColor b(55%));
 }
 .btn_info{
-	@mixin button $btnInfoColor, #000, color($btnInfoColor b(55%));
+	@mixin button $btnInfoColor, #fff, color($btnInfoColor b(55%));
+		&:disabled{
+			background: #1f6d83;
+			border-color: #1f6d83;
+			color: #d5d2d2;
+		}
 }
 .btn_warning{
 	@mixin button $btnWarColor, #000, color($btnWarColor b(10%));
@@ -50,6 +58,8 @@ button
 }
 .btn_small{
 	width: 120px;
+	font-size: 12px;
+	height: 32px;
 }
 
 /* Buttons group

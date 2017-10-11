@@ -16,13 +16,15 @@ var gulp = require('gulp'),
     gulp.task('js:build', getTask('js-build'));
     gulp.task('image:build', getTask('img-build'));
     gulp.task('watch', getTask('watch'));
-    gulp.task('webserver', getTask('server'));
+    gulp.task('webserver', ['nodemon'] , getTask('server'));
+    gulp.task('nodemon', getTask('nodemon'));
 
     gulp.task('build', [
         'html:build',
         'js:build',
         'style:build',
-        'image:build'
+        'image:build',
+
         //'concat'
     ]);
 

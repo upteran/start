@@ -9,23 +9,21 @@
 
 /* COMPONENTS
 ===============================*/
-/* @import 'partials/components/buttons';
-@import 'partials/components/form'; */
-/* @import 'partials/components/headers'; */
-/* @import 'partials/components/grid'; */
-/* @import 'partials/components/nav_list'; */
-/* @import 'partials/components/table';
+@import 'partials/components/buttons';
+@import 'partials/components/form';
+@import 'partials/components/headers';
+@import 'partials/components/grid';
+@import 'partials/components/nav_list';
+@import 'partials/components/table';
 @import 'partials/components/checkbox';
 @import 'partials/components/tabs';
-@import 'partials/components/dropdown'; */
+@import 'partials/components/dropdown';
 /* BLOCKS
 ===============================*/
-@import 'partials/blocks/info-b';
-/* @import 'partials/blocks/header'; */
-/* ;
-@import 'partials/blocks/sec_header';
-@import 'partials/blocks/footer';
-@import 'partials/blocks/alerts';
-@import 'partials/blocks/cards'; */
+@import 'partials/blocks/sidebar';
+/* @import 'partials/blocks/header';
+@import 'partials/blocks/footer'; */
 
-
+/* PLUGINS
+===============================*/
+@import 'plugins/datepicker';

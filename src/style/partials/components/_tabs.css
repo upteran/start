@@ -1,13 +1,18 @@
 /* TABS
 ===============================*/
 .tabs{
-	@mixin border 2px, $lightBorder;
-	padding: 20px;
+	padding: 20px 0;
 }
-.tab__content{
+.tabs-content{
+}
+.tabs-content-item{
+	margin-top: 25px;
+	box-shadow: 0px 1px 3px -1px #000;
 	display: none;
-	background: rgba(0 ,0, 0, .2);
-	padding: 10px;
+	padding: 20px;
+		div{
+			margin-bottom: 10px;
+		}
 		&.active{
 			display: block;
 		}
@@ -19,8 +24,15 @@
 			padding: 10px;
 			margin: 0 0 2px 0;
 			cursor: pointer;
+			background: #E0E0E0;
+			border-right: 1px solid #c0bfbf;
 				&.active{
-					border-bottom: 1px solid $darkBorder;
+					background: #09B6F5;
+					border-right: 1px solid #09B6F5;
+					color: #fff;
+				}
+				&:last-child{
+					border-right: none;
 				}
 		}
 }

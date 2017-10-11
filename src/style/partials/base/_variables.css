@@ -1,10 +1,9 @@
 $white: #fff;
 $shadow: rgba(0, 0, 0, .1);
-$mainColor: #3bbcb2;
-$mainTextColor: #33363f;
-$mainBgColor: #eeeeee;
+$mainColor: #000;
+$mainBgColor: #fff;
 
-$linkColor: #3bbcb2;
+$linkColor: red;
 $linkHoverColor: blue;
 $navColor: #337ab7;
 $titleColor: #000;
@@ -27,14 +26,10 @@ $borderError: #ff5656;
 $btnDefaultColor: rgb(227, 226, 226);
 $btnPrimeryColor: blue;
 $btnSuccColor: green;
-$btnInfoColor: grey;
+$btnInfoColor: #20B5DE;
 $btnWarColor: red;
 $btnDisColor: rgb(227, 226, 226);
 
 $succAlert: green;
 $warnAlert: orange;
 $errAlert: red;
-
-
-/* new */
-$sideWidth: 200px;
