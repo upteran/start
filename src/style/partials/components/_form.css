@@ -1,0 +1,33 @@
+/* FORM
+===============================*/
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='phone'],
+input[type='search'],
+input[type='file'],
+textarea{
+	color: $inputColor;
+	@mixin border 1px, $inputBorder;
+	padding: 5px 15px;
+	width: 100%;
+		&:focus{
+			@mixin border 1px, $inputBorderFocus;
+			outline: 0;
+			background: #fff;
+			color: $inputColorFocus;
+			box-shadow: 0 4px 20px rgba(31, 29, 29, 0.3);
+			transition: box-shadow .25s ease-out;
+		}
+		&.error{
+  			border-color: $borderError !important;
+  			box-shadow: 0 0 5px rgba(255,85,85,.3) !important;
+		}
+}
+.form-group{
+	margin-top: 20px;
+}
+textarea{
+	resize: none;
+}
