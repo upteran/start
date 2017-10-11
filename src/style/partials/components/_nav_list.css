@@ -1,0 +1,16 @@
+/* NAV LIST
+===============================*/
+.nav-list{
+	clear: fix;
+}
+.nav-list__item{
+	float: left;
+}
+.nav-list__link{
+	display: block;
+	padding: 5px 15px;
+	color: $navColor;
+}
+.sec-header__title{
+	color: $titleColor;
+}

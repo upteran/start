@@ -1,0 +1,40 @@
+$white: #fff;
+$shadow: rgba(0, 0, 0, .1);
+$mainColor: #3bbcb2;
+$mainTextColor: #33363f;
+$mainBgColor: #eeeeee;
+
+$linkColor: #3bbcb2;
+$linkHoverColor: blue;
+$navColor: #337ab7;
+$titleColor: #000;
+$lightBorder: rgb(227, 226, 226);
+$darkBorder: rgb(170, 169, 169);
+
+
+$mainFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$buttonFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontRegular: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+$inputBorder: rgb(205, 205, 205);
+$inputBorderFocus: rgb(227, 226, 226);
+$inputColor: #000;
+$inputColorFocus: #000;
+$borderError: #ff5656;
+
+$btnDefaultColor: rgb(227, 226, 226);
+$btnPrimeryColor: blue;
+$btnSuccColor: green;
+$btnInfoColor: grey;
+$btnWarColor: red;
+$btnDisColor: rgb(227, 226, 226);
+
+$succAlert: green;
+$warnAlert: orange;
+$errAlert: red;
+
+
+/* new */
+$sideWidth: 200px;

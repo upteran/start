@@ -1,0 +1,136 @@
+/* BASE
+===============================*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	font-family: $mainFont;
+/* 	font-size: 16px; */
+	line-height: 1.42857143;
+	color: $mainTextColor;
+	background-color: $mainBgColor;
+  padding-top: 60px;
+}
+/* Lists
+===================================*/
+ul { list-style: none; }
+ol { list-style: decimal inside; }
+
+ol, ul { margin: 0; padding: 0; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin: 10px 0 0 20px; }
+
+/* li { margin: 0 0 5px; } */
+
+ol { counter-reset: ol; }
+ul > li { padding-left: 2ch; }
+ol > li { padding-left: 3ch; }
+li {
+  position: relative;
+  display: block;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+  }
+}
+
+ul > li:before { content: ""; }
+
+ol > li:before {
+  content: counter(ol) ".";
+  counter-increment: ol;
+}
+/* Links
+===================================*/
+a {
+  color: $linkColor;
+  text-decoration: none;
+  	&:hover,
+	&:focus {
+	  color: $linkHoverColor;
+	  text-decoration: underline;
+	}
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+figure {
+  margin: 0;
+}
+/* img
+===================================*/
+img {
+  vertical-align: middle;
+}
+.img_responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img_rounded {
+  border-radius: 6px;
+}
+.img_thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img_circle {
+  border-radius: 50%;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr_only-focusable:active,
+.sr_only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+/* blockquote
+===================================*/
+blockquote{
+	padding: 10px;
+	@mixin border;
+	border-left: 10px solid $darkBorder;
+}

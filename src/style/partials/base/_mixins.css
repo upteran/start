@@ -1,0 +1,27 @@
+@define-mixin border $thickness: 1px, $color: $lightBorder{
+	border: $thickness solid $color;
+}
+@define-mixin rounded_corners $radius{
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+@define-mixin button $buttonColor, $textColor, $hoverColor{
+	background: $buttonColor;
+	color: $textColor;
+	@mixin border 1px, $buttonColor;
+		&:hover,
+		&:focus{
+			background: $hoverColor;
+			color: $textColor;
+			@mixin border 1px, $hoverColor;
+		}
+		&.btn_ghost{
+			color: $buttonColor;
+				&:hover,
+				&:focus{
+					color: $hoverColor;
+					background: transparent;
+				}
+		}
+}

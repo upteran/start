@@ -1,0 +1,26 @@
+/* TABS
+===============================*/
+.tabs{
+	@mixin border 2px, $lightBorder;
+	padding: 20px;
+}
+.tab__content{
+	display: none;
+	background: rgba(0 ,0, 0, .2);
+	padding: 10px;
+		&.active{
+			display: block;
+		}
+}
+.tabs__caption{
+	clear: fix;
+		li{
+			float: left;
+			padding: 10px;
+			margin: 0 0 2px 0;
+			cursor: pointer;
+				&.active{
+					border-bottom: 1px solid $darkBorder;
+				}
+		}
+}

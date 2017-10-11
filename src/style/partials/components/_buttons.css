@@ -1,0 +1,71 @@
+/* BUTTONS
+===============================*/
+.btn,
+input[type=button],
+button
+{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+  	white-space: nowrap;
+  	text-decoration: none;
+  	@mixin border;
+	outline: none;
+	height: 40px;
+	min-width: 140px;
+	font-weight: 400;
+	cursor: pointer;
+	font-family: $buttonFont;
+	@mixin rounded_corners 3px;
+		&.btn_ghost{
+			background: transparent;
+		}
+
+
+}
+.btn_default{
+	@mixin button $btnDefaultColor, #000, color($btnDefaultColor b(20%));
+}
+.btn_primary{
+	@mixin button $btnPrimeryColor, #000, color($btnPrimeryColor b(10%));
+}
+.btn_success{
+	@mixin button $btnSuccColor, #000, color($btnSuccColor b(55%));
+}
+.btn_info{
+	@mixin button $btnInfoColor, #000, color($btnInfoColor b(55%));
+}
+.btn_warning{
+	@mixin button $btnWarColor, #000, color($btnWarColor b(10%));
+}
+.btn_disabled{
+	@mixin button $btnDisColor, #000, color($btnDisColor b(10%));
+}
+[role="button"] {
+  cursor: pointer;
+}
+.btn_block{
+	display: block;
+	width: 100%;
+}
+.btn_small{
+	width: 120px;
+}
+
+/* Buttons group
+===============================*/
+.btn_group{
+		button,
+		.btn{
+			@mixin rounded_corners 0;
+			&:first-of-type{
+				border-radius: 4px 0 0 4px;
+			}
+			&:not(:first-of-type){
+				margin-left: -.3em;
+			}
+			&:last-of-type{
+				border-radius: 0 4px 4px 0;
+			}
+		}
+}

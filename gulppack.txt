@@ -1,0 +1,9 @@
+npm install --save-dev gulp-autoprefixer 
+npm install --save-dev gulp-concat-css 
+npm install --save-dev gulp-imagemin 
+npm install gulp-less 
+npm install --save-dev gulp-minify-css 
+npm install --save-dev gulp-rigger 
+npm install --save-dev gulp-uglify
+npm install --save-dev gulp-watch 
+npm install --save imagemin-pngquant
