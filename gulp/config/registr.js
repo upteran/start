@@ -9,9 +9,9 @@ module.exports = {
 	    fonts: 'build/fonts/'
 	},
 	src: {
-	    html: 'src/templates/**/*.html',
+	    html: 'src/templates/*.html',
 	    js: 'src/js/*.js',
-	    style: 'src/style/style.css',
+	    style: 'src/style/*.css',
 	    img: 'src/images/**/*.*',
 	    fonts: 'src/fonts/**/*.*',
 	    templates: 'src/templates',
