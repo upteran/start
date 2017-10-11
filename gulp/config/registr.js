@@ -10,14 +10,15 @@ module.exports = {
 	},
 	src: { //Пути откуда брать исходники
 	    html: 'src/*.html',
-	    js: 'src/js/*.js',
+	    entry: 'src/app/index.js',
+	    js: 'src/app/index.js',
 	    style: 'src/style/style.css',
 	    img: 'src/images/**/*.*',
 	    fonts: 'src/fonts/**/*.*'
 	},
 	watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
 	    html: 'src/**/*.html',
-	    js: 'src/js/**/*.js',
+	    js: 'src/app/**/*.js',
 	    style: 'src/style/**/*.css',
 	    img: 'src/images/**/*.*',
 	    fonts: 'src/fonts/**/*.*',

@@ -1,12 +1,10 @@
 'use strict';
-var browserSync = require('browser-sync'),
-    reload = browserSync.reload;
 
 module.exports = function(gulp, plugins, path){
     return function(){
-        return gulp.src(path.src.html)
-            .pipe(plugins.rigger())
-            .pipe(gulp.dest(path.build.html))
-            // .pipe(reload({stream: true}));
+        gulp.src(path.src.html) //Выберем файлы по нужному пути
+            .pipe(plugins.rigger()) //Прогоним через rigger
+            .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+            //.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
     }
 };

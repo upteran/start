@@ -1,21 +1,25 @@
 'use strict';
 
 var browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    nodemon = require('gulp-nodemon');
 
 var config = {
-    server: {
-        baseDir: "./build"
-    },
+    // server: {
+    //     baseDir: "./build"
+    // },
+    proxy: 'http://localhost:6000',
     tunnel: false,
-    host: 'localhost',
-    port: 9000,
+    files: ['./build/**/*.*'],
+    port: 8000,
     logPrefix: "saymyname"
 };
 
 module.exports = function(gulp, plugins, path){
 	return function(){
         browserSync.init(config)
-        // browserSync.watch(path.watch.server).on('change', browserSync.reload);
+        browserSync.watch(path.watch.server).on('change', browserSync.reload);
 	}
 }
+
+

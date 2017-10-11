@@ -1,16 +1,26 @@
 'use strict';
-var uglify = require('gulp-uglify'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+
+var webpackStream = require('webpack-stream'),
+	webpackConfig = require('./config/webpack.config'),
+	babel = require('gulp-babel');
+
+// module.exports = function(gulp, plugins, path){
+//     return function(){
+// 	    gulp.src(path.src.js) //Найдем наш main файл
+// 		    .pipe(webpackStream(webpackConfig))
+// 		    //.pipe(plugins.rename('bundle.js'))
+// 		    //.pipe(plugins.uglify())
+// 		    .pipe(gulp.dest(path.build.js))
+//     }
+// };
+
 
 module.exports = function(gulp, plugins, path){
     return function(){
-	    gulp.src(path.src.js)
-	        .pipe(plugins.rigger())
-	        .pipe(plugins.sourcemaps.init())
-	        .pipe(uglify())
-	        .pipe(plugins.sourcemaps.write())
-	        .pipe(gulp.dest(path.build.js))
-	        .pipe(reload({stream: true}));
+	    gulp.src(path.src.js) //Найдем наш main файл
+		    .pipe(webpackStream(webpackConfig))
+		    //.pipe(plugins.rename('bundle.js'))
+		    //.pipe(plugins.uglify())
+		    .pipe(gulp.dest(path.build.js))
     }
 };

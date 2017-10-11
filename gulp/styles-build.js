@@ -4,11 +4,9 @@ var postcss = require('gulp-postcss'),
     pxtorem = require('postcss-pxtorem'),
     cssnext = require('postcss-cssnext'),
     precss = require('precss'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
     flexbugs = require('postcss-flexbugs-fixes'),
     rucksack = require('rucksack-css'),
-    // colorFunction = require("postcss-color-function"),
+    colorFunction = require("postcss-color-function"),
     initialprop = require('postcss-initial');
 
 module.exports = function(gulp, plugins, path){
@@ -28,11 +26,12 @@ module.exports = function(gulp, plugins, path){
             
             flexbugs,
             initialprop,
+            colorFunction,
             pxtorem({
                 replace: false,
                 prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing']
             })
-
+            
             ];
 
         return gulp.src(path.src.style)
@@ -43,6 +42,6 @@ module.exports = function(gulp, plugins, path){
             //.pipe(cssnano())
             .pipe(plugins.sourcemaps.write('.'))
             .pipe(gulp.dest(path.build.css))
-            .pipe(reload({stream: true}));
+            //.pipe(reload({stream: true})); //И перезагрузим сервер
     }
 };
