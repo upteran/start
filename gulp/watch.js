@@ -7,7 +7,7 @@ var watch = require('gulp-watch'),
 module.exports = function(gulp, plugins, path){
     return function(){
 	    watch([path.watch.html], function(event, cb) {
-	        gulp.start('html:build');
+	        gulp.start('html-watch');
 	    });
 	    watch([path.watch.style], function(event, cb) {
 	        gulp.start('style:build')

@@ -24,6 +24,6 @@ module.exports = function(gulp, plugins, path){
               path: [path.src.templates]
             }))
             .pipe(htmlbeautify(htmlOptions))
-            // .pipe(gulp.dest(path.build.html));
+            .pipe(gulp.dest(path.build.html));
     }
 };
