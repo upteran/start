@@ -16,6 +16,6 @@ var config = {
 module.exports = function(gulp, plugins, path){
 	return function(){
         browserSync.init(config)
-        browserSync.watch(path.watch.server).on('change', browserSync.reload);
+        // browserSync.watch(path.watch.server).on('change', browserSync.reload);
 	}
 }

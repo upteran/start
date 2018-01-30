@@ -1,5 +1,10 @@
 'use strict';
 
+var uglify = require('gulp-uglify'),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload;
+
+
 module.exports = function(gulp, plugins, path){
     return function(){
 	    gulp.src(path.src.js)
@@ -8,6 +13,6 @@ module.exports = function(gulp, plugins, path){
 	        //.pipe(uglify()) Сожмем наш js
 	        .pipe(plugins.sourcemaps.write())
 	        .pipe(gulp.dest(path.build.js))
-	        //.pipe(reload({stream: true}));
+	        .pipe(reload({stream: true}));
     }
 };

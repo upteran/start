@@ -6,6 +6,8 @@ var postcss = require('gulp-postcss'),
     precss = require('precss'),
     flexbugs = require('postcss-flexbugs-fixes'),
     rucksack = require('rucksack-css'),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload,
     colorFunction = require("postcss-color-function"),
     initialprop = require('postcss-initial');
 
@@ -42,6 +44,6 @@ module.exports = function(gulp, plugins, path){
             //.pipe(cssnano())
             .pipe(plugins.sourcemaps.write('.'))
             .pipe(gulp.dest(path.build.css))
-            //.pipe(reload({stream: true})); //И перезагрузим сервер
+            .pipe(reload({stream: true})); //И перезагрузим сервер
     }
 };

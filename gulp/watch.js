@@ -1,6 +1,8 @@
 'use strict';
 
-var watch = require('gulp-watch');
+var watch = require('gulp-watch'),
+	browserSync = require("browser-sync"),
+    reload = browserSync.reload;
 
 module.exports = function(gulp, plugins, path){
     return function(){
@@ -19,6 +21,10 @@ module.exports = function(gulp, plugins, path){
 	    });
 	    watch([path.watch.fonts], function(event, cb) {
 	        gulp.start('fonts:build');
+	    });
+	   	gulp.task('html-watch', ['html:build'], function(done){
+	      	browserSync.reload();
+	      	done();
 	    });
     }
 };

@@ -1,10 +1,12 @@
 'use strict';
-const nunjucks = require('gulp-nunjucks-html');
-const nunjucksRender = require('gulp-nunjucks-render');
-const data = require('gulp-data');
-const gulpPath = require('path');
-const fs = require('fs');
-const htmlbeautify = require('gulp-html-beautify');
+const nunjucks = require('gulp-nunjucks-html'),
+      nunjucksRender = require('gulp-nunjucks-render'),
+      data = require('gulp-data'),
+      gulpPath = require('path'),
+      fs = require('fs'),
+      htmlbeautify = require('gulp-html-beautify'),
+      browserSync = require('browser-sync'),
+      reload = browserSync.reload;
 
 
 var getData = function (file) {
@@ -16,12 +18,12 @@ var htmlOptions = {
 };
 module.exports = function(gulp, plugins, path){
     return function(){
-        gulp.src(path.src.html)
-            .pipe(data(getData))
+        return gulp.src(path.src.html)
+            // .pipe(data(getData))
             .pipe(nunjucksRender({
               path: [path.src.templates]
             }))
             .pipe(htmlbeautify(htmlOptions))
-            .pipe(gulp.dest(path.build.html));
+            // .pipe(gulp.dest(path.build.html));
     }
 };
